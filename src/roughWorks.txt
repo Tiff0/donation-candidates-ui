@@ -1,0 +1,32 @@
+App Struture
+------------
+
+- src 
+--- actions
+| |
+| | -- app.js (handle all http request)
+| | -- donationCandidate.js (Redux actions & action creatoes)
+| | -- store.js (configure redux store)
+| 
+--- components
+| |
+| | -- DonationCandidateForm.js (form operations)
+| | -- DonationCandidates.js (list of records)
+| | -- useForm.js (handles common form operations)
+|
+--- reducers
+| | 
+| | -- donationCandidate.js
+| | -- index.js 
+|
+| -- App.js
+| -- index.js
+| -- index.css
+
+redux, react-redux, redux-thunk
+
+action - crud
+reducers 
+store 
+
+component -> dispatch(action) -> reducer(update the store) -> component
