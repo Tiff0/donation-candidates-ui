@@ -5,13 +5,13 @@ App Struture
 --- actions
 | |
 | | -- app.js (handle all http request)
-| | -- donationCandidate.js (Redux actions & action creatoes)
+| | -- donationCandidate.js (Redux actions & action creators)
 | | -- store.js (configure redux store)
 | 
 --- components
 | |
-| | -- DonationCandidateForm.js (form operations)
-| | -- DonationCandidates.js (list of records)
+| | -- DonationCandidateForm.js (form operations) - child
+| | -- DonationCandidates.js (list of records) - parent
 | | -- useForm.js (handles common form operations)
 |
 --- reducers

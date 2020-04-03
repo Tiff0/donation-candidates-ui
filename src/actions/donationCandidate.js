@@ -14,15 +14,12 @@ export const fetchAll = () =>
         api.donationCandidate()
             .fetchAll()
             .then(response => {
+                console.log(response);
+
                 dispatch({
                     type: ACTION_TYPES.FETCH_ALL,
                     payload: response.data
                 })
-            }).catch(err => console.log(err))
-
-        dispatch({
-            type: ACTION_TYPES.FETCH_ALL,
-            payload: []
-        })
+            }).catch(err => console.log(err));
     }
 }

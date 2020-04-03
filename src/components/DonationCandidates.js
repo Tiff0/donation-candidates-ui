@@ -1,7 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../actions/donationCandidate';
 
 const DonationCandidates = (props) => {
-    return ( <div> from DonationCandidates </div> )
-}
+    useEffect(() => {
+        props.fetchAllDonationCandidates()
+    },[]);
 
-export default DonationCandidates;
+    return ( <div> from DonationCandidates </div> )
+};
+
+const mapStateToProps = state => {
+    return{
+        donationCandidateList:state.donationCandidate.list
+    }
+};
+
+const mapActionToProps = {
+    fetchAllDonationCandidates: actions.fetchAll
+};
+
+export default connect(mapStateToProps, mapActionToProps)(DonationCandidates);
